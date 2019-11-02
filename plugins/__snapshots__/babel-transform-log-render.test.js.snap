@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`inject console.log 1`] = `
+"const HelloWorld = () => {
+  console.log(\\"%c >> RenderLog >> \\", \\"color: hotpink;\\", \\"HelloWorld\\");
+  const [val, setVal] = useState(true);
+  const [anotherVal, setAnotherVal] = useState(100);
+  return React.createElement(\\"span\\", null, \\"Hello World\\");
+};"
+`;

@@ -1,5 +1,5 @@
 {
-  "name": "cra-throwaway",
+  "name": "cra-babel-eslint",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -62,10 +62,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "test": "node scripts/test.js",
+    "clear:bc": "rimraf -rf ./node_modules/.cache/babel-loader/*"
   },
   "browserslist": {
     "production": [
@@ -81,7 +79,8 @@
   },
   "jest": {
     "roots": [
-      "<rootDir>/src"
+      "<rootDir>/src",
+      "<rootDir>/plugins"
     ],
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
@@ -93,7 +92,8 @@
     "setupFilesAfterEnv": [],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
-      "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
+      "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}",
+      "<rootDir>/plugins/**/*.{spec,test}.{js,jsx,ts,tsx}"
     ],
     "testEnvironment": "jest-environment-jsdom-fourteen",
     "transform": {
@@ -127,9 +127,7 @@
       "jest-watch-typeahead/testname"
     ]
   },
-  "babel": {
-    "presets": [
-      "react-app"
-    ]
+  "devDependencies": {
+    "eslint-plugin-dinesh-says-no": "../eslint-plugin-dinesh-says-no"
   }
 }
