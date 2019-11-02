@@ -1,21 +1,22 @@
 # CRA babel-eslint
 
-Example babel transform and eslint plugin(s) developed for my talk at React Sydney on Nov 4, 2019.
+Example babel transform and eslint plugins developed for my talk at React Sydney on Nov 4, 2019.
 
 ## Installation
 
 ### babel transform plugins
 
-Import and add the plugin to babel config.
+Import and add the plugins to babel config.
 
 .babelrc.js
 
 ```js
 const babelTransformLogRender = require("./plugins/babel-transform-log-render");
+const babelTransformLogStateChange = require("./plugins/babel-transform-log-state-change");
 
 module.exports = {
   presets: ["react-app"],
-  plugins: [babelTransformLogRender] // plugin goes here
+  plugins: [babelTransformLogRender, babelTransformLogStateChange] // plugin goes here
 };
 ```
 
